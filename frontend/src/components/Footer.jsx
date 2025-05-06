@@ -1,6 +1,8 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { useNavigate } from 'react-router-dom'
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className='md:mx-10 '>
         {/* Top section  */}
@@ -14,10 +16,10 @@ const Footer = () => {
             <div >
                 <p className='text-xl font-medium mb-5'>COMPANY</p>
                 <ul className='flex flex-col gap-2 text-gray-600'>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Privacy Policy</li>
+                    <li onClick={()=>{navigate('/')}} >Home</li>
+                    <li onClick={()=>{navigate('/about')}}>About Us</li>
+                    <li onClick={()=>{navigate('/contact')}}>Contact Us</li>
+                    <li onClick={()=>{navigate('/contact')}}>Privacy Policy</li>
                 </ul>
                 
             </div>
